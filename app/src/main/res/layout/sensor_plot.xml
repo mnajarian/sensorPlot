@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="edu.unc.mnajarian.sensorplot.SensorPlot"
+    android:weightSum="1">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/valueIv"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:background="@drawable/blue" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:text="Value"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/meanIv"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:background="@drawable/yellow"
+            />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:text="Mean"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/stdevIv"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:background="@drawable/red"
+            />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:text="St Dev"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/maxYtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="266dp"
+                android:gravity="center_vertical"
+                android:rotation="270"
+                android:text="Data" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                />
+
+
+        </LinearLayout>
+
+
+        <edu.unc.mnajarian.sensorplot.PlotView
+            android:id="@+id/pv"
+            android:layout_width="275dp"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_toLeftOf="@+id/button"
+            android:layout_toStartOf="@+id/button"
+            android:onClick="backToMain"
+            android:text="sensor select" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="49dp"
+            android:layout_marginRight="49dp"
+            android:onClick="sensorAnimation"
+            android:text="Animation" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

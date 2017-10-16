@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="edu.unc.mnajarian.sensorplot.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select a sensor:"
+        android:gravity="center"
+        android:layout_weight="0.11" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/accelButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Accelerometer"
+            android:onClick="plotAccelerometer"/>
+
+        <TextView
+            android:id="@+id/accelTv"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/accelButton"
+            android:layout_toEndOf="@+id/accelButton" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/lightButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Light"
+            android:onClick="plotLight"/>
+
+        <TextView
+            android:id="@+id/lightTv"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/lightButton"
+            android:layout_toEndOf="@+id/lightButton" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/proximityButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Proximity"
+            android:onClick="plotProximity"/>
+
+        <TextView
+            android:id="@+id/proximityTv"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/proximityButton"
+            android:layout_toEndOf="@+id/proximityButton" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
